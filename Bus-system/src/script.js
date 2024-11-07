@@ -46,7 +46,6 @@ if(typeof module !== 'undefined') {
         
         // I use this function to generate the message to be displayed after a booking is confirmed
         // in my test , i will check if the message is correctly set up with the right values
-        //
         generateBookingMessage: function(name, destination, seats, totalFare) {
             if (name && destination && seats > 0) {
                 return `Booking confirmed for ${name} to ${destination}. Seats: ${seats}. Total fare: $${totalFare}.`;

@@ -5,6 +5,14 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./Bus-system 
+        #added this line as i was getting error of no such file or directory on push 
+        #(reference for working directory: https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/cmd-line-v2?view=azure-pipelines&viewFallbackFrom=vsts&tabs=yaml )
+
+        
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

@@ -22,7 +22,7 @@ const { validateBooking, calculateFare, generateBookingMessage } = require('../s
 
 
 
-// NOTE - Describe block for the test suite title
+// NOTE - Describe block for the test suite
 describe('Bus Ticket Booking System', () => {
     // NOTE - Before each test i runs, i reset all form values to empty with the beforeEach function
     beforeEach(() => {
@@ -44,7 +44,7 @@ describe('Bus Ticket Booking System', () => {
         const validSeatNumber = 1;
         const negativeSeatNumber = -1;
         
-        // Then, i create different scenarios.   snake case **********************
+        // Then, i create different scenarios.
         const isItValidWithValidSeats = validateBooking(name, destination, validSeatNumber);
         const isItValidWithZeroSeats = validateBooking(name, destination, zeroSeats);
         const isItValidWithNegativeSeats = validateBooking(name, destination, negativeSeatNumber);

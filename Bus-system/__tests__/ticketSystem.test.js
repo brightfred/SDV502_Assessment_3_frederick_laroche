@@ -44,30 +44,30 @@ describe('Bus Ticket Booking System', () => {
         const validSeatNumber = 1;
         const negativeSeatNumber = -1;
         
-        // Then, i create different scenarios.
-        const isiTValidWithValidSeats = validateBooking(name, destination, validSeatNumber);
-        const isiTValidWithZeroSeats = validateBooking(name, destination, zeroSeats);
-        const isiTValidWithNegativeSeats = validateBooking(name, destination, negativeSeatNumber);
+        // Then, i create different scenarios.   snake case **********************
+        const isItValidWithValidSeats = validateBooking(name, destination, validSeatNumber);
+        const isItValidWithZeroSeats = validateBooking(name, destination, zeroSeats);
+        const isItValidWithNegativeSeats = validateBooking(name, destination, negativeSeatNumber);
         const isValid = validateBooking(name, destination, validSeatNumber);
-        const ismissingSeat = validateBooking(name, destination, zeroSeats);
-        const ismissingName = validateBooking('', destination, validSeatNumber);
-        const ismissingDestination = validateBooking(name, '', validSeatNumber);
-        const ismissingNameAndDestination = validateBooking('', '', validSeatNumber);
-        const ismissingSeatAndDestination = validateBooking(name, '', zeroSeats);
-        const ismissingNameAndSeat = validateBooking('', destination, zeroSeats);
-        const ismissingAll = validateBooking('', '', zeroSeats);
+        const isMissingSeat = validateBooking(name, destination, zeroSeats);
+        const isMissingName = validateBooking('', destination, validSeatNumber);
+        const isMissingDestination = validateBooking(name, '', validSeatNumber);
+        const isMissingNameAndDestination = validateBooking('', '', validSeatNumber);
+        const isMissingSeatAndDestination = validateBooking(name, '', zeroSeats);
+        const isMissingNameAndSeat = validateBooking('', destination, zeroSeats);
+        const isMissingAll = validateBooking('', '', zeroSeats);
         
         // Finally, i check that it all return the expected result
-        expect(isiTValidWithValidSeats).toBe(true);
-        expect(isiTValidWithZeroSeats).toBe(false);
-        expect(isiTValidWithNegativeSeats).toBe(false);
-        expect(ismissingSeat).toBe(false);
-        expect(ismissingName).toBe(false);
-        expect(ismissingDestination).toBe(false);
-        expect(ismissingNameAndDestination).toBe(false);
-        expect(ismissingSeatAndDestination).toBe(false);
-        expect(ismissingNameAndSeat).toBe(false);
-        expect(ismissingAll).toBe(false);
+        expect(isItValidWithValidSeats).toBe(true);
+        expect(isItValidWithZeroSeats).toBe(false);
+        expect(isItValidWithNegativeSeats).toBe(false);
+        expect(isMissingSeat).toBe(false);
+        expect(isMissingName).toBe(false);
+        expect(isMissingDestination).toBe(false);
+        expect(isMissingNameAndDestination).toBe(false);
+        expect(isMissingSeatAndDestination).toBe(false);
+        expect(isMissingNameAndSeat).toBe(false);
+        expect(isMissingAll).toBe(false);
         expect(isValid).toBe(true);
     });
 
